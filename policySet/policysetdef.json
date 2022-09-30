@@ -1,0 +1,12 @@
+{
+  "initiativeName": "demoPolicySet",
+  "displayName": "Demo Policy Initiative for Dev.to",
+  "Category": "compliance",
+  "version": "1.0.0",
+  "policyToInclude": [
+    "/providers/Microsoft.Authorization/policyDefinitions/b52376f7-9612-48a1-81cd-1ffe4b61032c",
+    "/providers/Microsoft.Authorization/policyDefinitions/d9844e8a-1437-4aeb-a32c-0c992f056095",
+    "/providers/Microsoft.Authorization/policyDefinitions/1b8ca024-1d5c-4dec-8995-b1a932b41780"
+  ],
+  "description": "Demo Policy Initiative for Dev.to"
+}
