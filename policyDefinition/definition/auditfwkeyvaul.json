@@ -1,0 +1,30 @@
+{
+    "properties": {
+     "displayName": "audit key vaults firewall",
+     "policyType": "Custom",
+     "mode": "Indexed",
+     "description": "Audit if firewal is configured on Azure Key Vault https://docs.microsoft.com/azure/key-vault/general/network-security",
+     "metadata": {
+      "version": "1.0.O",
+      "category": "Key Vault"
+     },
+     "parameters": {},
+     "policyRule": {
+      "if": {
+       "allOf": [
+        {
+         "field": "type",
+         "equals": "Microsoft.KeyVault/vaults"
+        },
+        {
+         "field": "Microsoft.KeyVault/vaults/networkAcls.defaultAction",
+         "notEquals": "Deny"
+        }
+       ]
+      },
+      "then": {
+       "effect": "audit"
+      }
+     }
+    }
+   }
